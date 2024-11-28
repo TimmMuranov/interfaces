@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang='ru'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<style>
+    #pagesContainer{
+        position: absolute;
+        margin-left: auto;
+        width: 95vw;
+        height: calc(100vw * (3 / 4));
+    }
+    #instrumentContainer{
+        display: none;
+        position: absolute;
+        margin-right: auto;
+        z-index: 100;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+/*Сделать так, чтобы это окно появлялось поверх body, не изменяя размер страницы*/
+
+    #page {
+        background: linear-gradient( #bbb, transparent 1px), linear-gradient( 90deg, #bbb, transparent 1px);
+        background-size: 15px 15px;
+        background-position: center center;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 25px 24px 9px rgba(0, 0, 0, 0.51), inset 0 0 10px rgba(0, 0, 0, 0.6);
+    }
+    #textInput{
+        position: relative;
+        resize: none;
+        border: 1px solid black;
+        width: 80%;
+        height: calc(100vw * (5 / 7));
+    }
+
+    #buttons{
+        position: fixed;
+        margin: 2px;
+        font-size: 4vw;
+        font-family: Bradley Hand, cursive;
+    }
+    #buttons:nth-child(1){top:0vw;}
+    #buttons:nth-child(2){top:6vw;}
+    #buttons:nth-child(3){top:12vw;}
+</style>
+<body>
+    <div id="instrumentContainer">
+        <p><button>Команда 1</button></p>
+        <p><button>Команда 2</button></p>
+        <p><button>...</button></p>
+        <p><a>Можно и текст</a></p>
+    </div>
+    <div id="pagesContainer">
+        <div id="page">
+            <textarea id="textInput"></textarea>
+            <a href="#" onclick="alert('Сохранить');" id="buttons">Сохранить</a>
+            <a href="#" onclick="alert('Скачать');" id="buttons">Скачать</a>
+            <a href="#" onclick="alert('Создать');" id="buttons">Создать</a>
+        </div>
+    </div>
+</body>
+</html>

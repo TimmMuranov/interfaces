@@ -1,25 +1,24 @@
-#table{
+#table {
     margin-left: auto;
     margin-right: auto;
-    margin-top: 100px;
+    margin-top: 10px;
     background-color: SaddleBrown;
     width: 75vw;
     height: 75vw;
     max-width: 500px;
     max-height: 500px;
-    border: 2vw solid Chocolate;
-}
-#tableInside{
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    top:9%;
-    width: 60vw;
-    height: 60vw;
-    max-width: 400px;
-    max-height: 400px;
-    background: linear-gradient( Maroon, transparent 1vw), linear-gradient( 90deg, Maroon, transparent 1vw);
+    border: 3vw solid Chocolate;
+    background:
+        linear-gradient(Maroon, transparent 1vw),
+        linear-gradient(90deg, Maroon, transparent 1vw);
     background-size: 34% 34%;
     background-position: center center;
-    border: 0.8vw solid Maroon;
+    background-color:SaddleBrown;
+}
+
+@media (min-aspect-ratio: 1/1) {
+    #table, #tableInside {
+        width: 75vh;
+        height: 75vh;
+    }
 }

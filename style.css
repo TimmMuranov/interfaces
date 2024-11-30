@@ -22,3 +22,56 @@
         height: 75vh;
     }
 }
+/*============================================*/
+#openFileMenu{
+    display: block;
+    position:absolute;
+    z-index:10;
+    left:0vw;
+    top:0vw;
+    width:6vw;
+    height:10vw;
+    background-color:gray;
+    border-right: 2px solid black;
+    text-align:center;
+    box-shadow: 2px 1px 1px gray;
+}
+#openFileMenu:hover{
+    box-shadow: 6px 4px 4px gray;
+    cursor: pointer;
+}
+.book{
+    height:33.33%;
+    width:100%;
+}
+.book:nth-child(1){
+    background:linear-gradient(red,gray);
+}
+.book:nth-child(2){
+    background:linear-gradient(blue,gray);
+}
+.book:nth-child(3){
+    background:linear-gradient(green,gray);
+}
+/*============================================*/
+
+#fileMenue{
+    display: none;
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    margin-left: auto;
+    background-color: rgba(128, 128, 128, 0.8);
+    border-radius: 2%;
+    width: 30%;
+    height: 80%;
+    font-size: 2.8vw;
+}
+/*=============================================*/
+#menueDescription{
+    height:10vw;
+    margin-left: 5vw;
+    text-align: center;
+    background-color:gray;
+}

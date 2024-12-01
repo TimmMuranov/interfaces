@@ -1,16 +1,26 @@
 const windowOuterWidth = window.outerWidth //ширина браузера
 const windowOuterHeight = window.outerHeight //высота браузера
-
 const fileMenue = document.getElementById("fileMenue");
 const openFileMenu = document.getElementById("openFileMenu");
 const tableInside = document.getElementById("tableInside");
-fileMenue.style.display = "none";
+const instruments = document.getElementById("instruments");
+const instrumentsMenue = document.getElementById("instrumentsMenue");
 
-openFileMenu.addEventListener("click", function(){
-    if(fileMenue.style.display === "none"){
-        fileMenue.style.display = "block";
-    }
-    else{
-        fileMenue.style.display = "none";
-    }
-})
+//===== Обработчики кнопок ========
+function noneBlock(htmlBtn, htmlObj){
+    htmlBtn.addEventListener("click", function(){
+        if(htmlObj.style.display === "none"){
+            htmlObj.style.display = "block";
+        }
+        else{
+            htmlObj.style.display = "none";
+        }
+    })
+}
+
+fileMenue.style.display = "none";
+instrumentsMenue.style.display = "none";
+
+noneBlock(openFileMenu,fileMenue);
+noneBlock(instruments,instrumentsMenue);
+//=====================================

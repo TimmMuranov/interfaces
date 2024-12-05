@@ -9,34 +9,25 @@ html, body {
 #table {
     margin-left: auto;
     margin-right: auto;
-    margin-top: 10px;
+    margin-top: 150px;
     background-color: SaddleBrown;
-    width: 75vw;
-    height: 75vw;
-    max-width: 500px;
-    max-height: 500px;
+    width: 80%;
+    height: 80%;
+
     border: 15px solid Maroon;
     border-radius: 50px;
-    background-image: repeating-radial-gradient(circle, SaddleBrown, Chocolate 10%, Chocolate 10%, Chocolate 12%);
     background-size: 100%;
     background-position: center;
 }
 
-@media (min-aspect-ratio: 1/1) {
-    #table, #tableInside {
-        width: 75vh;
-        height: 75vh;
-    }
-}
 /*============================================*/
 #openFileMenu{
     position:absolute;
     z-index:10;
     left:0vw;
     top:0vw;
-    width:12vw;
-    height:12vw;
-    background-color:gray;
+    width:100px;
+    height:100px;
     border-right: 2px solid black;
     border-left: 2px solid black;
     text-align:center;
@@ -49,7 +40,7 @@ html, body {
 .book{
     height:33.33%;
     width:100%;
-    font-size: 2vw;
+    font-size: 20px;
     color:Goldenrod;
 }
 /* Это просто книги */
@@ -66,19 +57,19 @@ html, body {
 
 #fileMenue{
     display: none;
-    position: fixed;
+    position: absolute;
     z-index: 3;
     left: 0;
     top: 0;
     margin-left: auto;
     background-color: rgba(128, 128, 128, 0.8);
     border-radius: 2%;
-    width: 30%;
+    width: 200px;
     height: 100%;
-    font-size: 2.8vw;
+    font-size: 20px;
 }
 #menueDescription{
-    height:10vw;
+    height:100px;
     width:100%;
     background-color:gray;
 }
@@ -93,11 +84,11 @@ html, body {
     z-index:10;
     right:0vw;
     top:0vw;
-    width:12vw;
-    height:12vw;
+    width:100px;
+    height:100px;
     background-color:DarkSlateGrey;
     border-left: 2px solid black;
-    font-size: 6vw;
+    font-size: 60px;
     text-align:center;
     box-shadow: 2px 2px 5px gray;
 }
@@ -108,24 +99,24 @@ html, body {
 
 #instrumentsMenue{
     display: none;
-    position: fixed;
+    position: absolute;
     z-index: 3;
     right: 0;
     top: 0;
     margin-right: auto;
     background-color: rgba(128, 128, 128, 0.8);
     border-radius: 2%;
-    width: 30%;
+    width: 200px;
     height: 100%;
-    font-size: 2.8vw;
+    font-size: 20px;
 }
 /*========================================*/
 .creat{
-    text-align:center;
-    width:15%;
-    height:33.33%;
-    margin-left: 36%;
-    border-radius:10px;
+    text-align: center;
+    width: 15%;
+    height: 33.33%;
+    margin-left: 55%;
+    border-radius: 10px;
     cursor: pointer;
 }
 .creat:nth-child(1){

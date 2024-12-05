@@ -1,7 +1,7 @@
 const windowOuterWidth = window.outerWidth //ширина браузера
 const windowOuterHeight = window.outerHeight //высота браузера
 const fileMenue = document.getElementById("fileMenue");
-const openFileMenu = document.getElementById("openFileMenu");
+const openFileMenue = document.getElementById("openFileMenue");
 const tableInside = document.getElementById("tableInside");
 const instruments = document.getElementById("instruments");
 const instrumentsMenue = document.getElementById("instrumentsMenue");
@@ -10,7 +10,7 @@ const creatText = document.getElementById("ct");
 const creatDir = document.getElementById("cd");
 const creatImg = document.getElementById("ci");
 
-//===== Обработчики кнопок ========
+//===== Обработчики кнопок создания ========
 function noneBlock(htmlBtn, htmlObj){
     htmlBtn.addEventListener("click", function(){
         if(htmlObj.style.display === "none"){
@@ -24,8 +24,10 @@ function noneBlock(htmlBtn, htmlObj){
 
 function creatFiles(button){
     let answer = [2];
-    answer[1] = button;
+    answer[1] = button.id;
     button.addEventListener("click", function(){
+        let butId = button.id;
+
         let fileName = prompt("Введите имя");
         if(fileName === "") {
             alert("Вы не ввели название.");
@@ -36,18 +38,29 @@ function creatFiles(button){
             return;
         }
     answer[2] = fileName;
-    alert("Вы попытались создать файл " + answer[2] + ", нажав на кнопку " + button.id);
+    alert("Вы попытались создать файл " + answer[2] + ", нажав на кнопку " + butId);
     // дальнейшая обработка нажатия.
-    // массив answer имеет пару "нажатая кнопка - введенное имя"
+    // массив answer имеет пару "id нажатой кнопки - введенное имя"
     })
 }
 
 fileMenue.style.display = "none";
 instrumentsMenue.style.display = "none";
 
-noneBlock(openFileMenu,fileMenue);
+noneBlock(openFileMenue,fileMenue);
 noneBlock(instruments,instrumentsMenue);
 creatFiles(creatText);
 creatFiles(creatDir);
 creatFiles(creatImg);
-//=====================================
+//======= Обработчики функций сервера =====
+
+function downloadFile(){
+    alert("Пока что скачивание не работает");
+    //перенесу алгоритм скачивания позже
+}
+
+function deleteFile(){
+    alert("Удалять пока что нечего)");
+    //и это тоже
+}
+

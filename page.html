@@ -5,11 +5,9 @@
 <link rel="stylesheet" href="style.css">
 <body>
 <div id="table">
-  <div id="tableInside" title="Розовый динозаврик">
-  </div>
 </div>
 
-<div id="openFileMenu">
+<div id="openFileMenue">
     <div class="book">dirs</div>
     <div class="book">images</div>
     <div class="book">texts</div>
@@ -21,11 +19,16 @@
     <div class="creat" id="ct">+</div>
   </div>
   <div id="mark">SD-card:/</div>
+  <hr>
 </div>
 <div id="instruments">&#128736</div>
 <div id="instrumentsMenue">
   <div id="menueDescription"></div>
-  <div id="mark">Доступные инструменты:</div>
+  <div id="mark">Функции:</div>
+  <div id="download" class="functions" onclick="downloadFile()">Скачать</div>
+  <div id="delete" class="functions" onclick="deleteFile()">Удалить</div>
+  <hr>
+
 </div>
 
 <script src="script.js"></script>

@@ -13,7 +13,6 @@ html, body {
     background-color: SaddleBrown;
     width: 80%;
     height: 80%;
-
     border: 15px solid Maroon;
     border-radius: 50px;
     background-size: 100%;
@@ -21,37 +20,37 @@ html, body {
 }
 
 /*============================================*/
-#openFileMenu{
-    position:absolute;
-    z-index:10;
-    left:0vw;
-    top:0vw;
-    width:100px;
-    height:100px;
+#openFileMenue{
+    position: absolute;
+    z-index: 10;
+    left: 0vw;
+    top: 0vw;
+    width: 100px;
+    height: 100px;
     border-right: 2px solid black;
     border-left: 2px solid black;
-    text-align:center;
+    text-align: center;
     box-shadow: 2px 1px 5px gray;
 }
-#openFileMenu:hover{
+#openFileMenue:hover{
     box-shadow: 2px 1px 5px black;
     cursor: pointer;
 }
 .book{
-    height:33.33%;
-    width:100%;
+    height: 33.33%;
+    width: 100%;
     font-size: 20px;
-    color:Goldenrod;
+    color: Goldenrod;
 }
 /* Это просто книги */
 .book:nth-child(1){
-    background:linear-gradient(red,gray);
+    background: linear-gradient(red,gray);
 }
 .book:nth-child(2){
-    background:linear-gradient(blue,gray);
+    background: linear-gradient(blue,gray);
 }
 .book:nth-child(3){
-    background:linear-gradient(green,gray);
+    background: linear-gradient(green,gray);
 }
 /*============================================*/
 
@@ -65,28 +64,27 @@ html, body {
     background-color: rgba(128, 128, 128, 0.8);
     border-radius: 2%;
     width: 200px;
-    height: 100%;
+    min-height:50%;
     font-size: 20px;
 }
 #menueDescription{
-    height:100px;
-    width:100%;
-    background-color:gray;
+    height: 100px;
+    width: 100%;
+    background-color: gray;
 }
 #mark{
     background-color: rgba(192, 192, 192, 0.8);
-    border-left: 2px solid black;
-    text-align:center;
+    text-align: center;
 }
 /*=============================================*/
 #instruments{
-    position:absolute;
-    z-index:10;
-    right:0vw;
-    top:0vw;
-    width:100px;
-    height:100px;
-    background-color:DarkSlateGrey;
+    position: absolute;
+    z-index: 10;
+    right: 0vw;
+    top: 0vw;
+    width: 100px;
+    height: 100px;
+    background-color: DarkSlateGrey;
     border-left: 2px solid black;
     font-size: 60px;
     text-align:center;
@@ -107,7 +105,7 @@ html, body {
     background-color: rgba(128, 128, 128, 0.8);
     border-radius: 2%;
     width: 200px;
-    height: 100%;
+    min-height:50%;
     font-size: 20px;
 }
 /*========================================*/
@@ -120,20 +118,39 @@ html, body {
     cursor: pointer;
 }
 .creat:nth-child(1){
-    background-color:red;
+    background-color: red;
 }
 .creat:nth-child(1):hover{
-    background-color:Maroon;
+    background-color: Maroon;
 }
 .creat:nth-child(2){
-    background-color:blue;
+    background-color: blue;
 }
 .creat:nth-child(2):hover{
-    background-color:navy;
+    background-color: navy;
 }
 .creat:nth-child(3){
-    background-color:green;
+    background-color: green;
 }
 .creat:nth-child(3):hover{
-    background-color:darkgreen;
+    background-color: darkgreen;
+}
+/*============================================*/
+div.functions{
+    text-align: center;
+    border-radius:20px;
+    margin:10px;
+    cursor: pointer;
+}
+#download{
+    background-color: silver;
+}
+#download:hover{
+    background-color: green;
+}
+#delete{
+    background-color: DarkSlateGrey;
+}
+#delete:hover{
+    background-color: red;
 }

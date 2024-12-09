@@ -4,31 +4,37 @@
 <meta name='viewport' content='width=device-width, initial-scale=1.0'>
 <link rel="stylesheet" href="style.css">
 <body>
-<div id="table">
-</div>
+<div id="table" title="Здесь пока ничего нет. Откройте или создайте файл для редактирования в файловом меню"></div>
 
-<div id="openFileMenue">
+<div id="openFileMenue" title="Файловое меню">
     <div class="book">dirs</div>
     <div class="book">images</div>
     <div class="book">texts</div>
 </div>
 <div id="fileMenue">
   <div id="menueDescription">
-    <div class="creat" id="cd">+</div>
-    <div class="creat" id="ci">+</div>
-    <div class="creat" id="ct">+</div>
+    <div class="creat" id="cd" title="Создать папку">+</div>
+    <div class="creat" id="ci" title="Создать рисунок">+</div>
+    <div class="creat" id="ct" title="Создать текст">+</div>
   </div>
+
   <div id="mark">SD-card:/</div>
-  <hr>
+  <button id="files" class="dir">Пример папки</button>
+  <button id="files" class="img">Пример картинки</button>
+  <button id="files" class="text">Пример текста</button>
 </div>
-<div id="instruments">&#128736</div>
+<div id="instruments" title="Инструменты">&#128736</div>
 <div id="instrumentsMenue">
   <div id="menueDescription"></div>
-  <div id="mark">Функции:</div>
-  <div id="download" class="functions" onclick="downloadFile()">Скачать</div>
-  <div id="delete" class="functions" onclick="deleteFile()">Удалить</div>
+  <div id="mark">Для файлов:</div>
+  <div class="functions" id="green" onclick="downloadFile()">Скачать</div>
+  <div class="functions" id="orange" onclick="closeFile()">Закрыть</div>
+  <div class="functions" id="red" onclick="deleteFile()">Удалить</div>
+  <div id="mark">Для папок:</div>
+  <div class="functions" id="orange" onclick="closeDir()">Выйти</div>
+  <div class="functions" id="red" onclick="deleteDir()">Удалить</div>
   <hr>
-
+  <div class="functions" id="green" onclick="moreFunctions()">Инструменты редактора</div>
 </div>
 
 <script src="script.js"></script>

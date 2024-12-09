@@ -63,4 +63,21 @@ function deleteFile(){
     alert("Удалять пока что нечего)");
     //и это тоже
 }
+function closeFile(){
+    alert("Закрываю файл");
+    //и это тоже
+}
+
+function deleteDir(){
+    alert("удаляем (шутка)");
+}
+function closeDir(){
+    alert("Закрываем дир");
+    //и это тоже
+}
+
+function moreFunctions(){
+    alert("Должно появиться меню с карандашами, стерками и тд.")
+}
+
 

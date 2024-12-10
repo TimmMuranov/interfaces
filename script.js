@@ -4,11 +4,15 @@ const fileMenue = document.getElementById("fileMenue");
 const openFileMenue = document.getElementById("openFileMenue");
 const tableInside = document.getElementById("tableInside");
 const instruments = document.getElementById("instruments");
-const instrumentsMenue = document.getElementById("instrumentsMenue");
+const instWind = document.getElementById("instWind");
 
 const creatText = document.getElementById("ct");
 const creatDir = document.getElementById("cd");
 const creatImg = document.getElementById("ci");
+
+fileMenue.style.display = "none";
+instrumentsMenue.style.display = "none";
+instWind.style.display = "none";
 
 //===== Обработчики кнопок создания ========
 function noneBlock(htmlBtn, htmlObj){
@@ -44,9 +48,6 @@ function creatFiles(button){
     })
 }
 
-fileMenue.style.display = "none";
-instrumentsMenue.style.display = "none";
-
 noneBlock(openFileMenue,fileMenue);
 noneBlock(instruments,instrumentsMenue);
 creatFiles(creatText);
@@ -77,7 +78,14 @@ function closeDir(){
 }
 
 function moreFunctions(){
-    alert("Должно появиться меню с карандашами, стерками и тд.")
+    console.log("moreFunc is started");
+    if(instWind.style.display == "none"){
+        instWind.style.display = "block";
+        console.log("block");
+    }
+    else{
+        instWind.style.display = "none";
+        console.log("none");
+    }
 }
-
 

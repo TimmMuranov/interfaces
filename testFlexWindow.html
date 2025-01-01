@@ -1,0 +1,41 @@
+<style>
+  #flexDiv{
+    position:absolute;
+    width:100px;
+    height:100px;
+    background-color:green;
+    border: 2px solid black;
+    border-radius: 10px;
+  }
+</style>
+<div id = "flexDiv">
+123
+</div>
+<script>
+let clX, clY;
+let isMouseDown = false;
+let flexDiv = document.getElementById("flexDiv");
+document.onmousemove = (e) => {
+  //console.log(`Координаты клика: X = ${e.clientX}, Y = ${e.clientY}`)
+  clX = e.clientX;
+  clY = e.clientY;
+  };
+const handleMouseDown = function (event){
+  isMouseDown = true;
+  const interval = setInterval(() => {
+    if (isMouseDown) {
+      console.log( "mouse coordinate: " + clX + " " + clY);
+      flexDiv.style.top = clY - 20;
+      flexDiv.style.left = clX - 20;
+    }
+  }, 20);
+  const stopInterval = () => {
+    clearInterval(interval); // Остановка интервала
+    isMouseDown = false;     // Сбрасываем флаг
+  };
+  document.addEventListener('mouseup', stopInterval);
+  document.addEventListener('mouseleave', stopInterval);
+};
+flexDiv.addEventListener('click', handleMouseDown);
+//ЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕ РАБОТАЕТ))))
+</script>
